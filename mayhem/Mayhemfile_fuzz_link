@@ -1,0 +1,9 @@
+project: savantenvs/td
+target: fuzz_link
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_link/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_link
+    libfuzzer: true
+    timeout: 10
